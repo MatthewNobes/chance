@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      // Book App
+      "name": "Book App",
+      "path": "./"
+    }
+  ],
+  "extensions": {
+    "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+  },
+  "settings": {
+    "cSpell.words": ["Authorised", "pocketbase"]
+  }
+}
