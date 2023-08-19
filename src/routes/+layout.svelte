@@ -8,4 +8,5 @@
 			<a class="hover:bg-neutral-200 px-2 py-2" href="/"><h1>Chance</h1></a>
 		</div>
 	</div>
+	<slot />
 </div>

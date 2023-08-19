@@ -1,8 +1,6 @@
-import adapter from '@sveltejs/adapter-auto';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import adapter from '@sveltejs/adapter-static';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
 	kit: {
 		adapter: adapter({
 			// default options are shown. On some platforms
@@ -13,8 +11,5 @@ const config = {
 			precompress: false,
 			strict: true
 		})
-	},
-	preprocess: vitePreprocess()
+	}
 };
-
-export default config;
