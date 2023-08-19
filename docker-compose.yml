@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app-static:
+    image: chance-static
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: deploy-static
+    ports:
+      - 3001:80
+
+  app-node:
+    image: chance-node
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: deploy-node
+    ports:
+      - 3002:3000

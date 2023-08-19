@@ -1,15 +1,22 @@
-import adapter from '@sveltejs/adapter-static';
+// import adapter from '@sveltejs/adapter-auto';
+import adapterStatic from '@sveltejs/adapter-static';
+import adapterNode from '@sveltejs/adapter-node';
+// @ts-ignore
+import adapterMulti from '@macfja/svelte-multi-adapter';
+import preprocess from 'svelte-preprocess';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: preprocess(),
+
 	kit: {
-		adapter: adapter({
-			// default options are shown. On some platforms
-			// these options are set automatically — see below
-			pages: 'build',
-			assets: 'build',
-			fallback: undefined,
-			precompress: false,
-			strict: true
-		})
+		adapter: adapterMulti([
+			adapterStatic({ pages: 'build-static', assets: 'build-static', precompress: false }),
+			adapterNode({ out: 'build-node', precompress: false })
+		])
 	}
 };
+
+export default config;
