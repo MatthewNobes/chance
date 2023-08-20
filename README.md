@@ -1,6 +1,6 @@
 # Chance
 
-A pseudorandom rice rolling app
+A single-page pseudorandom rice rolling app setup as a small svelte-kit and tailwind css test lab.
 
 ## Developing
 
@@ -15,7 +15,35 @@ npm run dev -- --open
 
 Note: you can use the flag `--host` to expose the web server to the rest of your network.
 
-## Building
+## Testing
+
+This project has been setup with two types of automated testing, automated unit tests for individual functions and components and full end-to-end testing for the whole app from the users perspective.
+
+Both test formats are checked in the CI.js.yml workflow file.
+
+### Unit tests
+
+Unit tests are managed using [vitest](https://vitest.dev/). They are designed to verify the outputs of individual functions. The test files should be located within the code, ideally next to the function file they are testing. The command to run the unit test suite is:
+
+```
+npm run test:unit
+```
+
+### End-to-end testing
+
+End-to-end testing has been implemented using [playwright](https://playwright.dev/). These tests use a virtual browse to carry out user actions and test that the expected result happens. The command to run the end-to-end testing suite is:
+
+```
+npm run test
+```
+
+The test files for end-to-end testing are stored in the `/tests` directory.
+
+When you first run this command you may notice the tests fail and it mentions you need to run `npx playwright install`. Run the stated command and it will then work.
+
+## Deploying
+
+### Building
 
 To create a production version of your app:
 
@@ -24,10 +52,6 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Deploying
 
 ### Docker
 

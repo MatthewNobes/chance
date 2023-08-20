@@ -34,5 +34,9 @@ jobs:
         run: npm install
       - name: Run build
         run: npm run build --if-present
-      - name: Test build
+      - name: Run unit tests
+        run: npm run test:unit
+      - name: Install playwright
+        run: npx playwright install
+      - name: Run end-to-end tests
         run: npm run test
