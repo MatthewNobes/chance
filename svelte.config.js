@@ -1,7 +1,5 @@
-// import adapter from '@sveltejs/adapter-auto';
 import adapterStatic from '@sveltejs/adapter-static';
 import adapterNode from '@sveltejs/adapter-node';
-// @ts-ignore
 import adapterMulti from '@macfja/svelte-multi-adapter';
 import preprocess from 'svelte-preprocess';
 
