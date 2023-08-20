@@ -1,7 +1,16 @@
 {
 	"name": "chance",
 	"version": "0.0.1",
-	"private": true,
+	"author": "Matthew Nobes",
+	"license": "MIT",
+	"repository": "https://github.com/MatthewNobes/chance",
+	"keywords": [
+		"svelte",
+		"random",
+		"dice"
+	],
+	"homepage": "/",
+	"private": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -12,7 +21,9 @@
 		"test:unit": "vitest",
 		"lint": "eslint .",
 		"prettier": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"prettier-check": "prettier --check .",
+		"prettier-fix": "prettier -w ."
 	},
 	"devDependencies": {
 		"@iconify/svelte": "^3.1.1",
