@@ -71,6 +71,6 @@ docker-compose up -d <insert-service-type>
 docker-compose up -d app-static
 ```
 
-The static site is hosted on port 3001 and the node site on 3002.
+The static site is hosted on port `3001` and the node site on `3002`.
 
 To borrow the docker setup from this repo, you will need to copy across the `docker-compose.yml`, `Dockerfile`, `svelte.config.js` and the adapters imported in the config file must be installed as dev dependencies.
