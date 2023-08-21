@@ -5,6 +5,7 @@
  * @returns {Number} the random number result
  */
 export const generateRandomNumber = (lowerLimit, upperLimit) => {
-	const randomNumber = Math.random() * (upperLimit - lowerLimit) + lowerLimit;
-	return randomNumber;
+	const min = Math.ceil(lowerLimit);
+	const max = Math.floor(upperLimit);
+	return Math.floor(Math.random() * (max - min) + min);
 };
