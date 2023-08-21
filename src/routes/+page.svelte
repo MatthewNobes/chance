@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
+	import DiceRoll from '../components/DiceRoll.svelte';
 </script>
 
-<h1>Roll dice component will go here</h1>
-<slot />
+<DiceRoll />
